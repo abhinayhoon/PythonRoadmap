@@ -1,0 +1,491 @@
+/* ===== PAGE FADE IN ===== */
+body {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ===== PAGE ===== */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f1c3f, #050914);
+  color: #e6e9f0;
+  line-height: 1.7;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px 120px;
+}
+
+/* ===== HEADER ===== */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #9aa4bf;
+  margin-bottom: 60px;
+  font-size: 1.05rem;
+}
+
+/* ===== ACCORDION BUTTON ===== */
+.accordion {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  cursor: pointer;
+  padding: 20px 24px;
+  border-radius: 14px;
+  border: none;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 18px;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.accordion:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ===== PANEL ===== */
+.panel {
+  display: none;
+  background: rgba(10, 16, 40, 0.85);
+  padding: 26px 28px 30px;
+  border-radius: 14px;
+  margin-top: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== TEXT ===== */
+.panel p {
+  margin-bottom: 14px;
+  color: #e2e6f5;
+}
+
+.panel ul {
+  margin: 12px 0 18px 22px;
+}
+
+.panel li {
+  margin-bottom: 8px;
+  color: #cfd6f6;
+}
+
+.panel h4 {
+  margin: 20px 0 10px;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+/* ===== CODE BLOCK ===== */
+pre {
+  background: #050a1f;
+  padding: 16px 18px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 14px 0 8px;
+}
+
+code {
+  color: #8be9fd;
+  font-family: "Consolas", monospace;
+  font-size: 0.95rem;
+}
+
+/* ===== COPY BUTTON ===== */
+.copy-btn {
+  margin-top: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ===== SPECIAL NOTES ===== */
+.mental-model {
+  background: rgba(34, 197, 94, 0.12);
+  border-left: 4px solid #22c55e;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin: 18px 0;
+  color: #d1fae5;
+}
+
+/* ===== FOOTER (OPTIONAL) ===== */
+footer {
+  margin-top: 80px;
+  text-align: center;
+  color: #8b93b5;
+  font-size: 0.9rem;
+}
+/* ===== SEARCH BAR ===== */
+.search-wrapper {
+  margin-bottom: 40px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e6e9f0;
+}
+
+#searchInput::placeholder {
+  color: #9aa4bf;
+}
+
+#searchInput:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.6);
+}
+/* ===== ACCORDION ALIGNMENT FIX ===== */
+.accordion {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 18px auto; /* center + spacing */
+  display: block;
+}
+
+.panel {
+  max-width: 900px;
+  margin: 0 auto 28px auto;
+}
+/* Fix uneven spacing between day sections */
+.accordion {
+  margin-bottom: 20px;
+}
+
+/* Remove accidental large gaps */
+.container > * {
+  margin-bottom: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+/* ===== FIX: remove gap after first 3 days ===== */
+
+/* This removes the extra space created by the top section */
+.hero,
+.intro,
+.top-section {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Ensure all accordion buttons flow continuously */
+.accordion {
+  margin-top: 12px;
+}
+
+/* First accordion should not add extra spacing */
+.accordion:first-of-type {
+  margin-top: 0;
+}
+.about-section {
+  max-width: 900px;
+  margin: 60px auto 40px;
+  padding: 0 20px;
+  color: #e6e6e6;
+}
+
+.about-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.about-section h2 {
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #ffd37a;
+}
+
+.about-section p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+  opacity: 0.95;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.about-note {
+  margin-top: 20px;
+  font-style: italic;
+  color: #cfcfcf;
+}
+/* ===== BUILT BY SECTION ===== */
+.made-by {
+  margin-top: 30px;
+  padding: 30px 20px;
+  text-align: center;
+  color: #b8c1d9;
+}
+
+
+.made-by-title {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.made-by-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.made-by-details {
+  font-size: 0.9rem;
+  color: #9aa4c7;
+  line-height: 1.6;
+}
+/* ===== CONNECT SECTION ===== */
+.connect {
+  margin-top: 60px;
+  padding: 30px 20px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.connect h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.connect-text {
+  font-size: 0.95rem;
+  color: #aeb6d8;
+  margin-bottom: 18px;
+}
+
+.connect-item {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.connect-item a {
+  color: #8ab4ff;
+  text-decoration: none;
+}
+
+.connect-item a:hover {
+  text-decoration: underline;
+}
+/* ===== SUBTLE DIVIDER ===== */
+.made-by::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 1px;
+  margin: 0 auto 24px;
+  background: rgba(255, 255, 255, 0.15);
+}
+/* ===== SECTION ANIMATION ===== */
+.about-section,
+.connect,
+.made-by {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: sectionReveal 0.7s ease-out forwards;
+}
+
+.about-section {
+  animation-delay: 0.1s;
+}
+
+.connect {
+  animation-delay: 0.2s;
+}
+
+.made-by {
+  animation-delay: 0.3s;
+}
+
+@keyframes sectionReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===============================
+   📱 Mobile Polish
+   =============================== */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    text-align: center;
+    opacity: 0.85;
+  }
+
+  /* About section */
+  .about-section {
+    padding: 18px 16px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+  }
+
+  .about-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Search bar */
+  .search-input {
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+
+  /* Accordion buttons (Day tabs) */
+  .accordion {
+    font-size: 0.95rem;
+    padding: 16px;
+    border-radius: 14px;
+    text-align: left;
+  }
+
+  /* Panel content */
+  .panel {
+    padding: 14px 16px;
+  }
+
+  .panel p,
+  .panel li {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  pre {
+    font-size: 0.85rem;
+    padding: 14px;
+    overflow-x: auto;
+  }
+
+  .copy-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  /* Footer sections */
+  .connect-section,
+  .built-by {
+    text-align: center;
+    padding: 18px 12px;
+  }
+
+  .connect-section a {
+    display: block;
+    margin: 6px 0;
+  }
+}
+/* ===============================
+   Sticky Search Bar (Simple)
+   =============================== */
+
+.search-input {
+  position: sticky;
+  top: 16px;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* visual polish when scrolling */
+.search-input.stuck {
+  background: rgba(20, 28, 52, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+/* ===== FADE IN PAGE ===== */
+body {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .accordion {
+    font-size: 0.95rem;
+    padding: 16px 18px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  pre {
+    font-size: 0.85rem;
+    overflow-x: auto;
+  }
+}

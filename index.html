@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Beginner → Builder</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Python, Explained While Learning.</h1>
+    <p class="subtitle">A 20-day Python roadmap for absolute beginners.</p>
+    <!-- About Section -->
+<section class="about-section">
+  
+  <p class="about-intro">
+    This page wasn’t built by an expert.
+    It was built by someone learning in real time, confused sometimes,
+    curious always, and stubborn enough to keep going.
+  </p>
+
+  <h2>About Me.</h2>
+  <p>
+    Hi there! I'm Abhinay, a student trying to figure things out,  not just Python, but life too.
+    Some days things click, some days they don’t.
+    This roadmap is not a display of mastery, it’s a record of effort.
+  </p>
+
+  <p>
+    I learn by breaking things, fixing them, and writing things down in the
+    simplest way I can. That’s exactly what you’re seeing here.
+  </p>
+
+  <h2>About This Page.</h2>
+  <p>
+    I started building this roadmap to help myself learn Python step by step.
+    While learning, I realized that many beginners struggle with the same
+    questions I do, so I kept everything open and simple.
+  </p>
+
+  <p>
+    This page grows as I grow. It’s not perfect, and it’s not finished.
+    But it’s honest.
+  </p>
+
+  <p class="about-note">
+    If you’re learning too, take your time.
+    You’re not behind.
+  </p>
+</section>
+
+
+<!-- Search Bar -->
+<div class="search-wrapper">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search day or topic (e.g. loops, OOP, Day 10)"
+  />
+</div>
+
+    <!-- DAY 1 -->
+    <button class="accordion">Day 1: What is Python?</button>
+    <div class="panel">
+      <p>
+        Python is a <strong>programming language</strong>.
+        A programming language lets humans give logical instructions to computers.
+      </p>
+
+      <p>
+        Computers do not understand emotions or natural language.
+        Python translates human logic into something machines understand.
+      </p>
+
+      <h4>Your first Python program</h4>
+
+      <pre><code>print("Hello, world")</code></pre>
+      <button class="copy-btn">Copy</button>
+
+      <p>
+        <strong>Explanation:</strong><br />
+        <code>print()</code> displays output on the screen.
+      </p>
+
+      <p class="mental">
+        🧠 Mental model: Python reads code line by line from top to bottom.
+      </p>
+    </div>
+
+    <!-- DAY 2 -->
+    <button class="accordion">Day 2: Variables & Data Types</button>
+    <div class="panel">
+      <p>
+        Variables allow programs to <strong>remember information</strong>.
+        Think of a variable as a labeled box storing data.
+      </p>
+
+      <pre><code>
+name = "Alex"
+age = 18
+height = 5.9
+is_student = True
+      </code></pre>
+      <button class="copy-btn">Copy</button>
+
+      <p>
+        Python automatically detects data types.
+        You don’t need to specify them manually.
+      </p>
+
+      <ul>
+        <li><strong>string</strong> → text</li>
+        <li><strong>int</strong> → whole numbers</li>
+        <li><strong>float</strong> → decimals</li>
+        <li><strong>bool</strong> → True / False</li>
+      </ul>
+    </div>
+
+    <!-- DAY 3 -->
+    <button class="accordion">Day 3: Input & Type Conversion</button>
+    <div class="panel">
+      <p>
+        Programs become useful when users can interact with them.
+        Python allows this using <code>input()</code>.
+      </p>
+
+      <pre><code>
+age = input("Enter your age: ")
+print(age)
+      </code></pre>
+      <button class="copy-btn">Copy</button>
+
+      <p>
+        <strong>Important:</strong> Input is always a string.
+      </p>
+
+      <pre><code>
+age = int(input("Enter your age: "))
+print(age + 1)
+      </code></pre>
+      <button class="copy-btn">Copy</button>
+      <p>
+        <code>int()</code> converts text into numbers so math is possible.
+      </p>
+    </div>
+  
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- DAY 4 -->
+<button class="accordion">Day 4: Conditions (if / else)</button>
+<div class="panel">
+    <div class="panel">
+
+  <p>
+    Programs often need to make decisions.
+    Python uses <strong>if</strong>, <strong>elif</strong>, and <strong>else</strong>
+    to control what code runs based on conditions.
+  </p>
+
+  <h4>Why conditions are needed</h4>
+  <p>
+    Without conditions, programs would run the same way every time.
+    Conditions allow programs to respond differently based on data.
+  </p>
+
+  <h4>Basic if statement</h4>
+
+  <pre><code>
+age = 18
+
+if age >= 18:
+    print("You are eligible to vote")
+  </code></pre>
+
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    Python checks the condition <code>age >= 18</code>.
+    If it is True, the code inside the if block runs.
+  </p>
+
+  <h4>if – else</h4>
+
+  <pre><code>
+age = 16
+
+if age >= 18:
+    print("You can vote")
+else:
+    print("You are too young to vote")
+  </code></pre>
+
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Only one block runs.
+    Python chooses based on whether the condition is True or False.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    Think of <strong>if</strong> like a question.
+    If the answer is yes → do this.
+    Otherwise → do something else.
+  </div>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Change the value of <code>age</code></li>
+    <li>Observe which message prints</li>
+    <li>Try adding your own condition</li>
+  </ul>
+
+</div>
+
+  <p>
+    Until now, your programs always ran the same way.
+    But real programs need to <strong>make decisions</strong>.
+    This is where <strong>conditions</strong> come in.
+  </p>
+
+  <p>
+    Conditions allow your program to ask questions and
+    choose different paths based on the answer.
+  </p>
+
+  <h4>Real-life analogy</h4>
+  <p>
+    Think about this statement:
+  </p>
+  <ul>
+    <li>If it is raining → take an umbrella</li>
+    <li>Else → don’t take an umbrella</li>
+  </ul>
+
+  <p>
+    Programming works the same way.
+  </p>
+
+  <h4>Basic if statement</h4>
+
+  <pre><code>
+age = 18
+
+if age >= 18:
+    print("You are an adult")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    Python checks the condition <code>age >= 18</code>.
+    If it is <strong>True</strong>, the code inside <code>if</code> runs.
+  </p>
+
+  <h4>if / else</h4>
+
+  <pre><code>
+age = 16
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    If the condition is False, Python jumps to <code>else</code>.
+  </p>
+
+  <h4>Important rule (VERY IMPORTANT)</h4>
+  <p>
+    Python uses <strong>indentation (spaces)</strong> to understand blocks of code.
+    Code inside <code>if</code> must be indented.
+  </p>
+
+  <pre><code>
+# Correct
+if True:
+    print("This works")
+
+# Wrong
+if True:
+print("This will give an error")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p class="mental">
+    🧠 Mental model: Python reads conditions first.
+    If the condition is True, it enters the block.
+    If not, it skips it.
+  </p>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a variable <code>marks</code></li>
+    <li>If marks ≥ 40 → print "Pass"</li>
+    <li>Else → print "Fail"</li>
+  </ul>
+
+  <p>
+    <strong>Goal of Day 4:</strong>
+    Learn how programs think and make decisions.
+  </p>
+</div>
+<button class="accordion">Day 5: Loops (for & while)</button>
+<div class="panel">
+
+  <p>
+    Loops are used when you want to repeat an action multiple times
+    without writing the same code again and again.
+  </p>
+
+  <h4>Why loops exist</h4>
+  <p>
+    Imagine printing numbers from 1 to 100.
+    Without loops, you would need 100 print statements.
+    Loops save time, reduce mistakes, and make programs scalable.
+  </p>
+
+  <h4>The <code>for</code> loop</h4>
+
+  <p>
+    A <code>for</code> loop is used when you know **how many times**
+    you want to repeat something.
+  </p>
+
+  <pre><code>
+for i in range(5):
+    print(i)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    <code>range(5)</code> generates numbers from 0 to 4.
+    Each number is stored in <code>i</code> one by one.
+    The loop runs 5 times.
+  </p>
+
+  <h4>Loop starting from 1</h4>
+
+  <pre><code>
+for i in range(1, 6):
+    print(i)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Here, <code>range(1, 6)</code> starts at 1 and stops before 6.
+  </p>
+
+  <h4>The <code>while</code> loop</h4>
+
+  <p>
+    A <code>while</code> loop runs **as long as a condition is True**.
+    It is used when you don’t know in advance how many times the loop will run.
+  </p>
+
+  <pre><code>
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    The loop checks the condition before every run.
+    If the condition becomes False, the loop stops.
+  </p>
+
+  <h4>Important warning ⚠️</h4>
+
+  <p>
+    If you forget to update the condition inside a <code>while</code> loop,
+    it may run forever. This is called an <strong>infinite loop</strong>.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    <strong>for loop:</strong> Repeat a fixed number of times<br>
+    <strong>while loop:</strong> Repeat until a condition changes
+  </div>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Print numbers from 1 to 10</li>
+    <li>Print only even numbers</li>
+    <li>Try changing loop ranges</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 6: Functions</button>
+<div class="panel">
+
+  <p>
+    Functions allow you to group code into reusable blocks.
+    Instead of writing the same logic again and again,
+    you write it once and reuse it whenever needed.
+  </p>
+
+  <h4>Why functions are important</h4>
+  <p>
+    Without functions, programs become long, messy, and hard to understand.
+    Functions make code cleaner, reusable, and easier to debug.
+  </p>
+
+  <h4>Basic function structure</h4>
+
+  <pre><code>
+def greet():
+    print("Hello!")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    <code>def</code> is used to define a function.<br>
+    <code>greet</code> is the function name.<br>
+    Code inside the function runs only when the function is called.
+  </p>
+
+  <h4>Calling a function</h4>
+
+  <pre><code>
+greet()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Calling a function means telling Python to execute the code inside it.
+  </p>
+
+  <h4>Functions with parameters</h4>
+
+  <pre><code>
+def greet(name):
+    print("Hello", name)
+
+greet("Alex")
+greet("Sam")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    Parameters are inputs to a function.
+    Here, <code>name</code> receives different values each time.
+  </p>
+
+  <h4>Functions that return values</h4>
+
+  <pre><code>
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    <code>return</code> sends a value back to where the function was called.
+    This allows functions to produce results.
+  </p>
+
+  <h4>Why return is powerful</h4>
+  <p>
+    Functions that return values can be used in calculations,
+    conditions, loops, and even inside other functions.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    A function is like a machine:
+    you give it inputs, it processes them,
+    and optionally gives back an output.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Forgetting to call the function</li>
+    <li>Using <code>print</code> instead of <code>return</code></li>
+    <li>Wrong indentation inside function</li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a function to multiply two numbers</li>
+    <li>Create a function that checks even or odd</li>
+    <li>Create a function that returns the square of a number</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 7: Lists (Storing Multiple Values)</button>
+<div class="panel">
+
+  <p>
+    Until now, one variable stored one value.
+    But real programs often deal with multiple values of the same type.
+    Python solves this using <strong>lists</strong>.
+  </p>
+
+  <h4>What is a list?</h4>
+  <p>
+    A list is a collection of items stored inside a single variable.
+    Lists can store numbers, text, or even other lists.
+  </p>
+
+  <h4>Creating a list</h4>
+
+  <pre><code>
+fruits = ["apple", "banana", "mango"]
+print(fruits)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Items in a list are written inside square brackets <code>[]</code>
+    and separated by commas.
+  </p>
+
+  <h4>Accessing list elements (indexing)</h4>
+
+  <pre><code>
+fruits = ["apple", "banana", "mango"]
+print(fruits[0])
+print(fruits[1])
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Important:</strong> List indexing starts from <code>0</code>, not 1.
+  </p>
+
+  <h4>Changing list values</h4>
+
+  <pre><code>
+fruits[1] = "orange"
+print(fruits)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Lists are <strong>mutable</strong>, meaning their values can be changed.
+  </p>
+
+  <h4>Common list operations</h4>
+
+  <pre><code>
+numbers = [1, 2, 3]
+
+numbers.append(4)
+numbers.remove(2)
+print(len(numbers))
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <code>append()</code> adds an item,
+    <code>remove()</code> deletes an item,
+    <code>len()</code> gives total number of items.
+  </p>
+
+  <h4>Using loops with lists</h4>
+
+  <pre><code>
+fruits = ["apple", "banana", "mango"]
+
+for fruit in fruits:
+    print(fruit)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Python automatically goes through each item in the list.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    A list is like a row of boxes.
+    Each box has a position (index) and a value inside it.
+  </div>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a list of 5 numbers</li>
+    <li>Print the first and last number</li>
+    <li>Add a new number to the list</li>
+    <li>Loop through the list and print all values</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 8: Tuples & Sets</button>
+<div class="panel">
+
+  <p>
+    Lists are flexible, but sometimes you want data that
+    <strong>should not change</strong> or collections that
+    <strong>should not have duplicates</strong>.
+    Python provides <strong>tuples</strong> and <strong>sets</strong> for this.
+  </p>
+
+  <h4>Tuples (immutable collections)</h4>
+  <p>
+    A tuple is like a list, but it cannot be changed after creation.
+    This makes tuples safer for fixed data.
+  </p>
+
+  <pre><code>
+coordinates = (10, 20)
+print(coordinates[0])
+print(coordinates[1])
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Tuples use parentheses <code>()</code>.
+    You can read values, but you cannot modify them.
+  </p>
+
+  <h4>Why use tuples?</h4>
+  <ul>
+    <li>Data should not change (days of week, coordinates)</li>
+    <li>More memory-efficient than lists</li>
+    <li>Safer in large programs</li>
+  </ul>
+
+  <h4>Attempting to modify a tuple (error example)</h4>
+
+  <pre><code>
+days = ("Mon", "Tue", "Wed")
+days[0] = "Sunday"   # This will cause an error
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Sets (unique collections)</h4>
+  <p>
+    A set stores unique values only.
+    Duplicate values are automatically removed.
+  </p>
+
+  <pre><code>
+numbers = {1, 2, 3, 3, 4}
+print(numbers)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Even though <code>3</code> was added twice, it appears only once.
+  </p>
+
+  <h4>Common set operations</h4>
+
+  <pre><code>
+numbers = {1, 2, 3}
+
+numbers.add(4)
+numbers.remove(2)
+print(numbers)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Sets are useful for checking membership quickly.
+  </p>
+
+  <h4>Checking membership</h4>
+
+  <pre><code>
+users = {"Alice", "Bob", "Charlie"}
+
+if "Bob" in users:
+    print("User exists")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    <strong>List:</strong> ordered, changeable, allows duplicates<br>
+    <strong>Tuple:</strong> ordered, unchangeable<br>
+    <strong>Set:</strong> unordered, unique values only
+  </div>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a tuple of 3 colors</li>
+    <li>Create a set with duplicate numbers</li>
+    <li>Check if a value exists in the set</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 9: Dictionaries (Key–Value Data)</button>
+<div class="panel">
+
+  <p>
+    Lists store values by position (index).
+    But many real-world problems don’t work by position.
+    They work by <strong>meaning</strong>.
+  </p>
+
+  <p>
+    Python solves this using <strong>dictionaries</strong>.
+    Dictionaries store data as <strong>key–value pairs</strong>.
+  </p>
+
+  <h4>Real-life analogy</h4>
+  <p>
+    Think of a dictionary book:
+    you look up a <em>word</em> (key) to get its <em>meaning</em> (value).
+    Python dictionaries work the same way.
+  </p>
+
+  <h4>Creating a dictionary</h4>
+
+  <pre><code>
+student = {
+    "name": "Alex",
+    "age": 18,
+    "is_student": True
+}
+
+print(student)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Dictionaries use curly braces <code>{}</code>.
+    Each key is connected to a value using a colon <code>:</code>.
+  </p>
+
+  <h4>Accessing values using keys</h4>
+
+  <pre><code>
+print(student["name"])
+print(student["age"])
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    You don’t use numbers like lists.
+    You use the <strong>key name</strong>.
+  </p>
+
+  <h4>Adding and updating values</h4>
+
+  <pre><code>
+student["age"] = 19
+student["city"] = "Delhi"
+
+print(student)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Dictionaries are <strong>mutable</strong>.
+    You can add new key–value pairs or update existing ones.
+  </p>
+
+  <h4>Removing values</h4>
+
+  <pre><code>
+student.pop("city")
+print(student)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Looping through a dictionary</h4>
+
+  <pre><code>
+for key in student:
+    print(key, ":", student[key])
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    This loop goes through each key and accesses its value.
+  </p>
+
+  <h4>Useful dictionary methods</h4>
+
+  <pre><code>
+print(student.keys())
+print(student.values())
+print(student.items())
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    These methods help you inspect and work with dictionary data.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    A dictionary is like a labeled cabinet:
+    each label (key) points to exactly one item (value).
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Using list-style indexes like <code>student[0]</code></li>
+    <li>Forgetting quotes around string keys</li>
+    <li>Confusing keys with values</li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a dictionary for a book (title, author, year)</li>
+    <li>Print each key and value</li>
+    <li>Update one value</li>
+    <li>Add a new key</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 10: Strings (Text in Python)</button>
+<div class="panel">
+
+  <p>
+    Strings are used to store and work with text.
+    Almost every real program deals with text in some form:
+    names, messages, passwords, files, and user input.
+  </p>
+
+  <h4>What is a string?</h4>
+  <p>
+    A string is a sequence of characters written inside quotes.
+    Python treats text as a collection of characters.
+  </p>
+
+  <pre><code>
+name = "Python"
+print(name)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Accessing characters (indexing)</h4>
+
+  <pre><code>
+word = "Python"
+print(word[0])
+print(word[3])
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Just like lists, strings use indexing starting from <code>0</code>.
+  </p>
+
+  <h4>String length</h4>
+
+  <pre><code>
+text = "Hello World"
+print(len(text))
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <code>len()</code> counts the number of characters,
+    including spaces.
+  </p>
+
+  <h4>Common string methods</h4>
+
+  <pre><code>
+text = "python programming"
+
+print(text.upper())
+print(text.lower())
+print(text.capitalize())
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    String methods do not change the original string.
+    They return a new modified version.
+  </p>
+
+  <h4>Replacing text</h4>
+
+  <pre><code>
+message = "I like Java"
+message = message.replace("Java", "Python")
+print(message)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Checking text content</h4>
+
+  <pre><code>
+email = "user@gmail.com"
+
+print("@" in email)
+print(email.startswith("user"))
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    These checks are commonly used in validation.
+  </p>
+
+  <h4>String formatting (VERY IMPORTANT)</h4>
+
+  <pre><code>
+name = "Alex"
+age = 18
+
+print(f"My name is {name} and I am {age} years old")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>f-strings</strong> allow you to embed variables
+    directly inside text. This is the modern and recommended way.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    A string is a list of characters that you can read,
+    inspect, and transform — but not modify directly.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Forgetting quotes around text</li>
+    <li>Trying to modify characters directly</li>
+    <li>Using <code>+</code> instead of f-strings</li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Take a name input and print it in uppercase</li>
+    <li>Check if a word exists inside a sentence</li>
+    <li>Create a formatted sentence using f-strings</li>
+  </ul>
+
+</div>
+<button class="accordion">Quick Revision: Day 1 to Day 10</button>
+<div class="panel">
+
+  <h4>Day 1: What is Python?</h4>
+  <ul>
+    <li>Python is a programming language used to give instructions to computers.</li>
+    <li>Programs run line by line from top to bottom.</li>
+    <li><code>print()</code> is used to display output.</li>
+    <li>Main goal: understand how code executes.</li>
+  </ul>
+
+  <h4>Day 2: Variables & Data Types</h4>
+  <ul>
+    <li>Variables store data in memory.</li>
+    <li><code>=</code> is assignment, not equality.</li>
+    <li>Common data types: string, int, float, boolean.</li>
+    <li>Python automatically detects data types.</li>
+  </ul>
+
+  <h4>Day 3: Input & Type Conversion</h4>
+  <ul>
+    <li><code>input()</code> takes data from the user.</li>
+    <li>User input is always string by default.</li>
+    <li>Convert input using <code>int()</code>, <code>float()</code>.</li>
+    <li>Conversion is needed for calculations.</li>
+  </ul>
+
+  <h4>Day 4: Conditions (if / else)</h4>
+  <ul>
+    <li>Conditions allow programs to make decisions.</li>
+    <li><code>if</code> runs when condition is True.</li>
+    <li><code>else</code> runs when condition is False.</li>
+    <li>Indentation defines code blocks.</li>
+  </ul>
+
+  <h4>Day 5: Loops (for / while)</h4>
+  <ul>
+    <li>Loops repeat code.</li>
+    <li><code>for</code> loop is used when repetitions are known.</li>
+    <li><code>while</code> loop runs until condition becomes False.</li>
+    <li>Be careful of infinite loops.</li>
+  </ul>
+
+  <h4>Day 6: Functions</h4>
+  <ul>
+    <li>Functions group reusable code.</li>
+    <li>Defined using <code>def</code>.</li>
+    <li>Functions can take parameters.</li>
+    <li><code>return</code> sends data back.</li>
+  </ul>
+
+  <h4>Day 7: Lists</h4>
+  <ul>
+    <li>Lists store multiple values.</li>
+    <li>Indexing starts from 0.</li>
+    <li>Lists are mutable (changeable).</li>
+    <li>Used heavily in real programs.</li>
+  </ul>
+
+  <h4>Day 8: Tuples & Sets</h4>
+  <ul>
+    <li>Tuples are immutable (cannot change).</li>
+    <li>Sets store unique values only.</li>
+    <li>Tuples are ordered, sets are unordered.</li>
+  </ul>
+
+  <h4>Day 9: Dictionaries</h4>
+  <ul>
+    <li>Dictionaries store key–value pairs.</li>
+    <li>Access data using keys, not indexes.</li>
+    <li>Very common in real-world applications.</li>
+  </ul>
+
+  <h4>Day 10: Strings</h4>
+  <ul>
+    <li>Strings store text.</li>
+    <li>Support indexing and many built-in methods.</li>
+    <li>f-strings are the modern way to format text.</li>
+  </ul>
+
+  <div class="mental">
+    🧠 <strong>Big Picture:</strong><br>
+    By Day 10, you understand program flow, data storage,
+    decision-making, repetition, and real-world data handling.
+  </div>
+
+</div>
+<button class="accordion">Day 11: File Handling (Reading & Writing Files)</button>
+<div class="panel">
+
+  <p>
+    Until now, all data existed only while the program was running.
+    Once the program stopped, the data was lost.
+    File handling allows programs to <strong>store data permanently</strong>.
+  </p>
+
+  <h4>What is file handling?</h4>
+  <p>
+    File handling means reading data from files and writing data to files.
+    Files are used to store information like logs, user data, reports, and results.
+  </p>
+
+  <h4>Opening a file</h4>
+
+  <pre><code>
+file = open("data.txt", "r")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    <code>"data.txt"</code> is the file name.<br>
+    <code>"r"</code> means read mode.
+  </p>
+
+  <h4>Reading from a file</h4>
+
+  <pre><code>
+file = open("data.txt", "r")
+content = file.read()
+print(content)
+file.close()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Always close the file after reading to free system resources.
+  </p>
+
+  <h4>Writing to a file</h4>
+
+  <pre><code>
+file = open("data.txt", "w")
+file.write("Hello, this is written to a file.")
+file.close()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Important:</strong>  
+    <code>"w"</code> mode overwrites the file if it already exists.
+  </p>
+
+  <h4>Appending to a file</h4>
+
+  <pre><code>
+file = open("data.txt", "a")
+file.write("\nThis line is added later.")
+file.close()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <code>"a"</code> mode adds new content without deleting existing data.
+  </p>
+
+  <h4>The recommended way: using <code>with</code></h4>
+
+  <pre><code>
+with open("data.txt", "r") as file:
+    content = file.read()
+    print(content)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Using <code>with</code> automatically closes the file.
+    This is safer and cleaner.
+  </p>
+
+  <h4>File modes summary</h4>
+  <ul>
+    <li><code>"r"</code> → read</li>
+    <li><code>"w"</code> → write (overwrite)</li>
+    <li><code>"a"</code> → append</li>
+  </ul>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    A file is like a notebook on disk.
+    Your program opens it, reads or writes,
+    and then closes it.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Forgetting to close the file</li>
+    <li>Using <code>"w"</code> instead of <code>"a"</code></li>
+    <li>Trying to read a file that doesn’t exist</li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a file and write your name to it</li>
+    <li>Read the content and print it</li>
+    <li>Append a new line with today’s date</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 12: Error Handling (try / except)</button>
+<div class="panel">
+
+  <p>
+    Until now, when an error occurred, your program stopped immediately.
+    This is bad for real applications.
+    Error handling allows your program to
+    <strong>handle mistakes gracefully instead of crashing</strong>.
+  </p>
+
+  <h4>What is an error?</h4>
+  <p>
+    An error occurs when Python encounters something it cannot understand
+    or cannot execute.
+    Examples include wrong input, missing files, or invalid operations.
+  </p>
+
+  <h4>Example of a program crash</h4>
+
+  <pre><code>
+number = int(input("Enter a number: "))
+print(10 / number)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    If the user enters <code>0</code> or text,
+    the program will crash with an error.
+  </p>
+
+  <h4>Handling errors using <code>try</code> and <code>except</code></h4>
+
+  <pre><code>
+try:
+    number = int(input("Enter a number: "))
+    print(10 / number)
+except:
+    print("Something went wrong")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    Python tries to run the code inside <code>try</code>.
+    If an error happens, it jumps to <code>except</code>
+    instead of crashing.
+  </p>
+
+  <h4>Handling specific errors</h4>
+
+  <pre><code>
+try:
+    number = int(input("Enter a number: "))
+    print(10 / number)
+except ValueError:
+    print("Please enter a valid number")
+except ZeroDivisionError:
+    print("Division by zero is not allowed")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Handling specific errors gives better messages
+    and better control.
+  </p>
+
+  <h4>Using <code>else</code> with try</h4>
+
+  <pre><code>
+try:
+    number = int(input("Enter a number: "))
+except ValueError:
+    print("Invalid input")
+else:
+    print("You entered:", number)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    The <code>else</code> block runs only if no error occurs.
+  </p>
+
+  <h4>Using <code>finally</code></h4>
+
+  <pre><code>
+try:
+    file = open("data.txt", "r")
+    print(file.read())
+except FileNotFoundError:
+    print("File not found")
+finally:
+    print("Program finished")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <code>finally</code> always runs,
+    whether an error occurred or not.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    Think of <code>try</code> as:
+    “Attempt this safely.”
+    If something breaks,
+    Python uses <code>except</code>
+    instead of stopping everything.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Using a broad <code>except</code> without specifying error types</li>
+    <li>Hiding errors instead of fixing logic</li>
+    <li>Overusing try/except everywhere</li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Ask the user for two numbers</li>
+    <li>Handle invalid input</li>
+    <li>Handle division by zero</li>
+    <li>Print a friendly message instead of crashing</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 13: Modules & Imports</button>
+<div class="panel">
+
+  <p>
+    As programs grow, putting everything in one file becomes messy.
+    Python solves this by allowing you to split code into
+    <strong>modules</strong>.
+  </p>
+
+  <h4>What is a module?</h4>
+  <p>
+    A module is simply a Python file that contains functions,
+    variables, or classes.
+    Any Python file (<code>.py</code>) can be used as a module.
+  </p>
+
+  <h4>Why modules are important</h4>
+  <ul>
+    <li>Keep code organized</li>
+    <li>Reuse code across files</li>
+    <li>Make programs easier to maintain</li>
+  </ul>
+
+  <h4>Using built-in modules</h4>
+
+  <pre><code>
+import math
+
+print(math.sqrt(16))
+print(math.pi)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Python comes with many built-in modules.
+    <code>math</code> provides mathematical functions.
+  </p>
+
+  <h4>Importing specific items</h4>
+
+  <pre><code>
+from math import sqrt, pi
+
+print(sqrt(25))
+print(pi)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    This allows you to use functions directly
+    without writing the module name.
+  </p>
+
+  <h4>Using aliases</h4>
+
+  <pre><code>
+import math as m
+
+print(m.sqrt(9))
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Aliases make long module names shorter and cleaner.
+  </p>
+
+  <h4>Creating your own module</h4>
+
+  <pre><code>
+# file: mymodule.py
+def greet(name):
+    return "Hello " + name
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Now import it in another file:
+  </p>
+
+  <pre><code>
+import mymodule
+
+print(mymodule.greet("Alex"))
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>How Python finds modules</h4>
+  <p>
+    Python looks for modules in:
+  </p>
+  <ul>
+    <li>The current folder</li>
+    <li>Standard library folders</li>
+    <li>Installed packages</li>
+  </ul>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    A module is like a toolbox.
+    You import the toolbox,
+    then use the tools inside it.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Forgetting the <code>.py</code> file name</li>
+    <li>Circular imports (files importing each other)</li>
+    <li>Importing everything unnecessarily</li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Use the <code>random</code> module to generate a number</li>
+    <li>Create your own module with one function</li>
+    <li>Import and use that function in another file</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 14: Working with JSON</button>
+<div class="panel">
+
+  <p>
+    Modern applications exchange data using <strong>JSON</strong>.
+    APIs, configuration files, and databases commonly use JSON format.
+    Python provides built-in support for working with JSON easily.
+  </p>
+
+  <h4>What is JSON?</h4>
+  <p>
+    JSON stands for <strong>JavaScript Object Notation</strong>.
+    It is a lightweight format used to store and transfer data.
+    JSON looks very similar to Python dictionaries.
+  </p>
+
+  <h4>Example of JSON data</h4>
+
+  <pre><code>
+{
+  "name": "Alex",
+  "age": 18,
+  "is_student": true
+}
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Keys are strings, values can be numbers, strings, booleans,
+    lists, or other JSON objects.
+  </p>
+
+  <h4>The <code>json</code> module</h4>
+
+  <pre><code>
+import json
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Python’s <code>json</code> module allows converting between
+    Python data and JSON data.
+  </p>
+
+  <h4>Converting Python to JSON (serialization)</h4>
+
+  <pre><code>
+import json
+
+data = {
+    "name": "Alex",
+    "age": 18,
+    "skills": ["Python", "HTML"]
+}
+
+json_data = json.dumps(data)
+print(json_data)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <code>json.dumps()</code> converts Python objects
+    into a JSON-formatted string.
+  </p>
+
+  <h4>Converting JSON to Python (deserialization)</h4>
+
+  <pre><code>
+import json
+
+json_text = '{"name": "Alex", "age": 18}'
+python_data = json.loads(json_text)
+
+print(python_data["name"])
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <code>json.loads()</code> converts JSON text into a Python dictionary.
+  </p>
+
+  <h4>Reading JSON from a file</h4>
+
+  <pre><code>
+import json
+
+with open("data.json", "r") as file:
+    data = json.load(file)
+
+print(data)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Writing JSON to a file</h4>
+
+  <pre><code>
+import json
+
+data = {
+    "project": "Python Roadmap",
+    "day": 14
+}
+
+with open("data.json", "w") as file:
+    json.dump(data, file)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    JSON files are commonly used for settings and saved data.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    JSON is a universal language for data.
+    Python converts dictionaries into JSON
+    and JSON back into dictionaries.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Forgetting quotes around JSON keys</li>
+    <li>Using single quotes instead of double quotes</li>
+    <li>Confusing <code>load</code> with <code>loads</code></li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a Python dictionary</li>
+    <li>Convert it to JSON</li>
+    <li>Save it to a file</li>
+    <li>Read it back into Python</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 15: Virtual Environments & pip</button>
+<div class="panel">
+
+  <p>
+    As projects grow, they start depending on external libraries.
+    Different projects may need different versions of the same library.
+    This is where <strong>virtual environments</strong> become essential.
+  </p>
+
+  <h4>What is pip?</h4>
+  <p>
+    <strong>pip</strong> is Python’s package manager.
+    It is used to install, update, and remove external libraries.
+  </p>
+
+  <pre><code>
+pip install requests
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    This command downloads and installs the <code>requests</code> library.
+  </p>
+
+  <h4>Why virtual environments are needed</h4>
+  <p>
+    Installing packages globally can cause conflicts between projects.
+    Virtual environments isolate dependencies per project.
+  </p>
+
+  <h4>Creating a virtual environment</h4>
+
+  <pre><code>
+python -m venv venv
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    This creates a folder named <code>venv</code>
+    containing an isolated Python environment.
+  </p>
+
+  <h4>Activating the virtual environment</h4>
+
+  <p><strong>On Windows:</strong></p>
+  <pre><code>
+venv\Scripts\activate
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p><strong>On macOS / Linux:</strong></p>
+  <pre><code>
+source venv/bin/activate
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Once activated, any package you install
+    belongs only to this project.
+  </p>
+
+  <h4>Installing packages inside venv</h4>
+
+  <pre><code>
+pip install flask
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    The package is installed inside the virtual environment,
+    not globally.
+  </p>
+
+  <h4>Freezing dependencies</h4>
+
+  <pre><code>
+pip freeze > requirements.txt
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    This creates a file listing all installed packages.
+    It allows others to recreate the same environment.
+  </p>
+
+  <h4>Installing from requirements file</h4>
+
+  <pre><code>
+pip install -r requirements.txt
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Deactivating the virtual environment</h4>
+
+  <pre><code>
+deactivate
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    A virtual environment is a sealed room.
+    Everything installed inside stays inside,
+    and does not affect other projects.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Forgetting to activate the virtual environment</li>
+    <li>Installing packages globally by mistake</li>
+    <li>Not using <code>requirements.txt</code></li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a virtual environment</li>
+    <li>Activate it</li>
+    <li>Install one package</li>
+    <li>Freeze dependencies to a file</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 16: APIs & HTTP Requests</button>
+<div class="panel">
+
+  <p>
+    Modern applications rarely work alone.
+    They communicate with other applications using <strong>APIs</strong>.
+    Python can send requests and receive data from servers across the internet.
+  </p>
+
+  <h4>What is an API?</h4>
+  <p>
+    API stands for <strong>Application Programming Interface</strong>.
+    It allows one program to request data or services from another program.
+  </p>
+
+  <h4>Real-life analogy</h4>
+  <p>
+    An API is like a waiter in a restaurant.
+    You place an order (request),
+    the kitchen prepares it,
+    and the waiter brings the response back to you.
+  </p>
+
+  <h4>HTTP request types</h4>
+  <ul>
+    <li><strong>GET</strong> → fetch data</li>
+    <li><strong>POST</strong> → send data</li>
+    <li><strong>PUT</strong> → update data</li>
+    <li><strong>DELETE</strong> → remove data</li>
+  </ul>
+
+  <h4>The <code>requests</code> library</h4>
+  <p>
+    Python uses the <code>requests</code> library to work with APIs.
+    (Installed using pip in Day 15.)
+  </p>
+
+  <pre><code>
+pip install requests
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Making a GET request</h4>
+
+  <pre><code>
+import requests
+
+response = requests.get("https://api.github.com")
+print(response.status_code)
+print(response.text)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <code>status_code</code> tells whether the request succeeded.
+    <code>200</code> means success.
+  </p>
+
+  <h4>Getting JSON data from an API</h4>
+
+  <pre><code>
+import requests
+
+response = requests.get("https://api.github.com")
+data = response.json()
+
+print(data["current_user_url"])
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Many APIs return data in JSON format.
+    Python converts it directly into dictionaries.
+  </p>
+
+  <h4>Handling request errors</h4>
+
+  <pre><code>
+import requests
+
+response = requests.get("https://api.github.com/invalid")
+
+if response.status_code == 200:
+    print("Success")
+else:
+    print("Request failed")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Sending data using POST</h4>
+
+  <pre><code>
+import requests
+
+data = {
+    "name": "Alex",
+    "course": "Python"
+}
+
+response = requests.post("https://httpbin.org/post", json=data)
+print(response.json())
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    POST requests send data to a server,
+    commonly used for forms and APIs.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    Your program sends a request →  
+    waits →  
+    receives a response →  
+    processes the data.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Forgetting to install <code>requests</code></li>
+    <li>Not checking status codes</li>
+    <li>Assuming API always returns valid data</li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Send a GET request to a public API</li>
+    <li>Print one value from the JSON response</li>
+    <li>Check the status code before using data</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 17: OOP (Classes & Objects)</button>
+<div class="panel">
+
+  <p>
+    Until now, we wrote programs using functions and variables.
+    This works, but as programs grow, managing everything becomes hard.
+    <strong>Object-Oriented Programming (OOP)</strong> helps structure large programs
+    in a clean and logical way.
+  </p>
+
+  <h4>What is OOP?</h4>
+  <p>
+    OOP is a programming style where we model real-world entities
+    as <strong>objects</strong>.
+    Each object has <strong>data</strong> and <strong>behavior</strong>.
+  </p>
+
+  <h4>Real-life analogy</h4>
+  <p>
+    Think of a <strong>student</strong>:
+    <ul>
+      <li>Data → name, age, roll number</li>
+      <li>Behavior → study(), attend_class()</li>
+    </ul>
+    OOP lets us represent this directly in code.
+  </p>
+
+  <h4>What is a class?</h4>
+  <p>
+    A <strong>class</strong> is a blueprint.
+    It defines what data and behavior an object will have.
+    Objects are created from classes.
+  </p>
+
+  <h4>Creating a class</h4>
+
+  <pre><code>
+class Student:
+    pass
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    This defines a class named <code>Student</code>.
+    Right now, it does nothing, but it sets the structure.
+  </p>
+
+  <h4>Creating an object</h4>
+
+  <pre><code>
+student1 = Student()
+print(student1)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <code>student1</code> is an object (instance) of the <code>Student</code> class.
+  </p>
+
+  <h4>The <code>__init__</code> method (constructor)</h4>
+  <p>
+    The <code>__init__</code> method runs automatically
+    when an object is created.
+    It is used to initialize data.
+  </p>
+
+  <pre><code>
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <strong>Explanation:</strong><br>
+    <code>self</code> refers to the current object.<br>
+    Each object stores its own <code>name</code> and <code>age</code>.
+  </p>
+
+  <h4>Using object data</h4>
+
+  <pre><code>
+student1 = Student("Alex", 18)
+student2 = Student("Sam", 20)
+
+print(student1.name)
+print(student2.age)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Each object has its own separate data.
+  </p>
+
+  <h4>Methods (object behavior)</h4>
+
+  <pre><code>
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print("Hello, my name is", self.name)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Methods are functions that belong to a class.
+    They define what an object can do.
+  </p>
+
+  <h4>Calling a method</h4>
+
+  <pre><code>
+student = Student("Alex")
+student.greet()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Why use OOP?</h4>
+  <ul>
+    <li>Better organization of code</li>
+    <li>Reusability</li>
+    <li>Easier to maintain large programs</li>
+    <li>Closer to real-world thinking</li>
+  </ul>
+
+  <h4>Encapsulation (basic idea)</h4>
+  <p>
+    Encapsulation means keeping related data and methods together
+    inside a class.
+    This reduces complexity and confusion.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    A class is a blueprint.<br>
+    An object is a real thing created from that blueprint.<br>
+    Objects hold data and know how to act on it.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Forgetting to use <code>self</code></li>
+    <li>Confusing class and object</li>
+    <li>Trying to access variables without <code>self</code></li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a class <code>Car</code> with attributes</li>
+    <li>Add a method to display car details</li>
+    <li>Create two car objects with different data</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 18: Inheritance & Polymorphism</button>
+<div class="panel">
+
+  <p>
+    In Day 17, you learned how to create classes and objects.
+    Now we go one level deeper.
+    <strong>Inheritance</strong> and <strong>Polymorphism</strong>
+    allow you to reuse code and write flexible programs.
+  </p>
+
+  <h4>What is inheritance?</h4>
+  <p>
+    Inheritance allows one class to <strong>reuse</strong>
+    the properties and methods of another class.
+    The new class is called a <strong>child</strong>,
+    and the original class is called a <strong>parent</strong>.
+  </p>
+
+  <h4>Real-life analogy</h4>
+  <p>
+    A <strong>Car</strong> and a <strong>Bike</strong>
+    are both <strong>Vehicles</strong>.
+    They share common features like speed and fuel,
+    but they also have their own unique behaviors.
+  </p>
+
+  <h4>Creating a parent class</h4>
+
+  <pre><code>
+class Vehicle:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def start(self):
+        print("Vehicle started")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    <code>Vehicle</code> is a parent class.
+    It defines behavior common to all vehicles.
+  </p>
+
+  <h4>Creating a child class</h4>
+
+  <pre><code>
+class Car(Vehicle):
+    def drive(self):
+        print("Car is driving")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    The <code>Car</code> class inherits from <code>Vehicle</code>.
+    It automatically gets access to the <code>start()</code> method.
+  </p>
+
+  <h4>Using inherited methods</h4>
+
+  <pre><code>
+car = Car("Toyota")
+car.start()
+car.drive()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Even though <code>start()</code> is not defined in <code>Car</code>,
+    it can still be used because of inheritance.
+  </p>
+
+  <h4>Method overriding</h4>
+  <p>
+    A child class can redefine a method from the parent class.
+    This is called <strong>method overriding</strong>.
+  </p>
+
+  <pre><code>
+class Bike(Vehicle):
+    def start(self):
+        print("Bike started with kick")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    The <code>Bike</code> class replaces the parent's
+    <code>start()</code> behavior with its own.
+  </p>
+
+  <h4>What is polymorphism?</h4>
+  <p>
+    Polymorphism means <strong>same method name, different behavior</strong>.
+    Different objects respond differently to the same method call.
+  </p>
+
+  <h4>Polymorphism example</h4>
+
+  <pre><code>
+vehicles = [Car("Honda"), Bike("Yamaha")]
+
+for v in vehicles:
+    v.start()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Even though the method name is the same,
+    Python calls the correct version based on the object type.
+  </p>
+
+  <h4>Why this matters</h4>
+  <ul>
+    <li>Less repeated code</li>
+    <li>Cleaner structure</li>
+    <li>Easier extension of programs</li>
+    <li>Core concept behind frameworks</li>
+  </ul>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    Inheritance = sharing features<br>
+    Polymorphism = same action, different behavior<br>
+    Together they make code flexible and powerful.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Overusing inheritance when not needed</li>
+    <li>Forgetting the parent class name in brackets</li>
+    <li>Confusing overriding with overloading</li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a parent class <code>Animal</code></li>
+    <li>Create child classes <code>Dog</code> and <code>Cat</code></li>
+    <li>Override a method like <code>sound()</code></li>
+    <li>Call the method in a loop to see polymorphism</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 19: Databases (SQLite Basics)</button>
+<div class="panel">
+
+  <p>
+    Files are useful, but when data grows,
+    managing it becomes slow and messy.
+    Databases solve this problem by storing data
+    in a structured, searchable, and efficient way.
+  </p>
+
+  <h4>What is a database?</h4>
+  <p>
+    A database is an organized collection of data.
+    It allows fast storage, retrieval, updating,
+    and deletion of information.
+  </p>
+
+  <h4>Why SQLite?</h4>
+  <p>
+    SQLite is a lightweight, built-in database in Python.
+    It does not require installation or a server.
+    Perfect for beginners and small applications.
+  </p>
+
+  <h4>Importing SQLite in Python</h4>
+
+  <pre><code>
+import sqlite3
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Creating a database connection</h4>
+
+  <pre><code>
+import sqlite3
+
+conn = sqlite3.connect("students.db")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    This creates a database file named <code>students.db</code>.
+    If it doesn’t exist, Python creates it automatically.
+  </p>
+
+  <h4>Creating a table</h4>
+
+  <pre><code>
+cursor = conn.cursor()
+
+cursor.execute("""
+CREATE TABLE students (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    age INTEGER
+)
+""")
+
+conn.commit()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    A table stores data in rows and columns,
+    similar to a spreadsheet.
+  </p>
+
+  <h4>Inserting data into the table</h4>
+
+  <pre><code>
+cursor.execute(
+    "INSERT INTO students (name, age) VALUES (?, ?)",
+    ("Alex", 18)
+)
+
+conn.commit()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    The <code>?</code> placeholders prevent SQL injection
+    and make code safer.
+  </p>
+
+  <h4>Reading data from the database</h4>
+
+  <pre><code>
+cursor.execute("SELECT * FROM students")
+rows = cursor.fetchall()
+
+for row in rows:
+    print(row)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Each row is returned as a tuple.
+  </p>
+
+  <h4>Updating data</h4>
+
+  <pre><code>
+cursor.execute(
+    "UPDATE students SET age = ? WHERE name = ?",
+    (19, "Alex")
+)
+
+conn.commit()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Deleting data</h4>
+
+  <pre><code>
+cursor.execute(
+    "DELETE FROM students WHERE name = ?",
+    ("Alex",)
+)
+
+conn.commit()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Closing the database</h4>
+
+  <pre><code>
+conn.close()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <p>
+    Always close the database connection
+    when you are done.
+  </p>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    A database is like an organized notebook:
+    tables are pages,
+    rows are entries,
+    and columns define structure.
+  </div>
+
+  <h4>Common beginner mistakes</h4>
+  <ul>
+    <li>Forgetting to commit changes</li>
+    <li>Not closing the database connection</li>
+    <li>Writing SQL directly with user input</li>
+  </ul>
+
+  <h4>Mini practice</h4>
+  <ul>
+    <li>Create a database for books</li>
+    <li>Add multiple book records</li>
+    <li>Fetch and display all books</li>
+    <li>Update and delete a record</li>
+  </ul>
+
+</div>
+<button class="accordion">Day 20: Mini Project (Putting Everything Together)</button>
+<div class="panel">
+
+  <p>
+    Congratulations.
+    By reaching Day 20, you have learned enough Python
+    to build <strong>real, meaningful programs</strong>.
+    Today is about combining concepts into one complete project.
+  </p>
+
+  <h4>Goal of Day 20</h4>
+  <p>
+    The goal is not to write perfect code.
+    The goal is to understand how different concepts work together
+    in a single application.
+  </p>
+
+  <h4>Mini Project: Student Management System</h4>
+  <p>
+    You will build a simple program that:
+  </p>
+  <ul>
+    <li>Takes user input</li>
+    <li>Uses functions for logic</li>
+    <li>Stores data in a database</li>
+    <li>Handles errors safely</li>
+  </ul>
+
+  <h4>Features of the project</h4>
+  <ul>
+    <li>Add a student</li>
+    <li>View all students</li>
+    <li>Update student details</li>
+    <li>Delete a student</li>
+    <li>Exit the program safely</li>
+  </ul>
+
+  <h4>Step 1: Database setup (SQLite)</h4>
+
+  <pre><code>
+import sqlite3
+
+conn = sqlite3.connect("students.db")
+cursor = conn.cursor()
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS students (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER
+)
+""")
+
+conn.commit()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Step 2: Function to add a student</h4>
+
+  <pre><code>
+def add_student(name, age):
+    cursor.execute(
+        "INSERT INTO students (name, age) VALUES (?, ?)",
+        (name, age)
+    )
+    conn.commit()
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Step 3: Function to view students</h4>
+
+  <pre><code>
+def view_students():
+    cursor.execute("SELECT * FROM students")
+    students = cursor.fetchall()
+    for student in students:
+        print(student)
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Step 4: Handling user input safely</h4>
+
+  <pre><code>
+try:
+    age = int(input("Enter age: "))
+except ValueError:
+    print("Please enter a valid number")
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Step 5: Menu-driven loop</h4>
+
+  <pre><code>
+while True:
+    print("1. Add Student")
+    print("2. View Students")
+    print("3. Exit")
+
+    choice = input("Choose an option: ")
+
+    if choice == "1":
+        name = input("Enter name: ")
+        age = int(input("Enter age: "))
+        add_student(name, age)
+
+    elif choice == "2":
+        view_students()
+
+    elif choice == "3":
+        break
+  </code></pre>
+  <button class="copy-btn">Copy</button>
+
+  <h4>Concepts used in this project</h4>
+  <ul>
+    <li>Variables & data types</li>
+    <li>Conditions & loops</li>
+    <li>Functions</li>
+    <li>Error handling</li>
+    <li>SQLite database</li>
+    <li>Modular thinking</li>
+  </ul>
+
+  <h4>How to improve this project</h4>
+  <ul>
+    <li>Add update and delete options</li>
+    <li>Validate user input properly</li>
+    <li>Convert it into a GUI or web app</li>
+    <li>Split code into modules</li>
+  </ul>
+
+  <h4>Mental model</h4>
+  <div class="mental">
+    Real programs are not about knowing everything.
+    They are about connecting simple ideas
+    into something useful.
+  </div>
+
+  <h4>What you can confidently say now</h4>
+  <ul>
+    <li>I understand Python fundamentals</li>
+    <li>I can build small real-world projects</li>
+    <li>I know how to learn further on my own</li>
+  </ul>
+
+  <h4>Final advice</h4>
+  <p>
+    Do not chase perfection.
+    Build, break, fix, repeat.
+    That is how real developers grow.
+  </p>
+
+</div>
+<section class="connect">
+  <h3>Connect</h3>
+
+  <p class="connect-text">
+    Feel Free to Reach Out 😊
+  </p>
+
+  <p class="connect-item">
+    📧 <a href="mailto:maiabhinayhoon@gmail.com">maiabhinayhoon@gmail.com</a>
+  </p>
+
+  <p class="connect-item">
+    🔗 <a href="https://www.linkedin.com/in/abhinayhai?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+     LinkedIn Profile
+    </a>
+  </p>
+</section>
+
+<footer class="made-by">
+  <p class="made-by-title">Built by</p>
+
+  <p class="made-by-name">
+    Abhinay Pratap Singh
+  </p>
+
+  <p class="made-by-details">
+    B.Tech CSE · First-year student<br>
+    Graphic Era Hill University
+  </p>
+</footer>
+
