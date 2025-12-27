@@ -545,3 +545,24 @@ body {
   font-size: 0.8rem;
   opacity: 0.6;
 }
+/* =========================
+   PRESSED BUTTON FEEL (MOBILE)
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .accordion {
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease,
+      background-color 0.12s ease;
+  }
+
+  /* visible pressed state */
+  .accordion.is-pressed {
+    transform: translateY(2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25) inset;
+    background-color: rgba(255, 255, 255, 0.16);
+  }
+
+}

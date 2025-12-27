@@ -66,3 +66,20 @@ window.addEventListener('scroll', () => {
     searchInput.classList.remove('stuck');
   }
 });
+/* =========================
+   PRESSED VISUAL FEEDBACK (SAFE)
+   ========================= */
+
+document.querySelectorAll(".accordion").forEach(btn => {
+  btn.addEventListener("touchstart", () => {
+    btn.classList.add("is-pressed");
+  }, { passive: true });
+
+  btn.addEventListener("touchend", () => {
+    btn.classList.remove("is-pressed");
+  });
+
+  btn.addEventListener("touchcancel", () => {
+    btn.classList.remove("is-pressed");
+  });
+});
