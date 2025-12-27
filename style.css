@@ -588,3 +588,23 @@ body {
   }
 
 }
+/* =========================
+   RESTORE MOBILE PRESSED FEEL
+   ========================= */
+
+.accordion {
+  outline: none;
+}
+
+/* Mobile tap = focus */
+.accordion:focus,
+.accordion:focus-visible {
+  transform: translateY(3px);
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* prevent ugly blue highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
