@@ -4,6 +4,9 @@ on:
   pull_request:
   push:
     branches: [main]
+  schedule:
+    # A maintenance opportunity roughly every three days; it never writes or commits.
+    - cron: "17 7 */3 * *"
   workflow_dispatch:
 
 permissions:
@@ -19,6 +22,8 @@ jobs:
           test -s index.html
           test -s style.css
           test -s script.js
+      - name: Validate curriculum structure and in-page links
+        run: node scripts/validate-roadmap.mjs
       - name: Prevent committed credentials
         run: |
           ! grep -EIn '(AIza[0-9A-Za-z_-]{20,}|sk-[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})' index.html script.js style.css
