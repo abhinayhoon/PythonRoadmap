@@ -409,13 +409,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ===== AI PYTHON BUDDY (Claude API) ===== */
+  /* ===== AI PYTHON BUDDY ===== */
   const chatMessages = document.getElementById("chatMessages");
   const chatInput = document.getElementById("chatInput");
   const chatSend = document.getElementById("chatSend");
   const suggestedQ = document.getElementById("suggestedQ");
 
-  const systemPrompt = "You are APS, a premium Python learning buddy for a 30-day roadmap website built by Abhinay, a first-year CSE student. Be sleek, highly intelligent, and encouraging. Use concise, high-end formatting. Never say 'certainly', 'absolutely', 'great question'. Reference the roadmap days (1–30) when relevant. Keep it real. Format code in triple backticks.";
   let conversationHistory = [];
 
   function formatMarkdown(text) {
@@ -465,37 +464,9 @@ document.addEventListener("DOMContentLoaded", () => {
     conversationHistory.push({ role: "user", content: userText });
 
     try {
-      // Convert our conversation history to Gemini's format
-      const geminiHistory = conversationHistory.map(msg => ({
-        role: msg.role === "assistant" ? "model" : "user",
-        parts: [{ text: msg.content }]
-      }));
-
-      // Replace YOUR_API_KEY_HERE with a free key from https://aistudio.google.com/
-      const API_KEY = window.ENV_GEMINI_API_KEY || "YOUR_API_KEY_HERE";
-      
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          systemInstruction: {
-            parts: [{ text: systemPrompt }]
-          },
-          contents: geminiHistory
-        })
-      });
-
-      if (!response.ok) throw new Error("API Error");
-      const data = await response.json();
-      
-      // Extract the response text from Gemini's payload
-      const assistantMessage = data.candidates[0].content.parts[0].text;
-      
       document.getElementById("typingIndicator")?.remove();
-      addMessage(assistantMessage, "assistant");
-      conversationHistory.push({ role: "assistant", content: assistantMessage });
+      addMessage("The AI helper is not configured yet. API keys must stay on a server, never in browser code. For now, use the lesson examples or open an issue with your question.", "assistant");
+      conversationHistory.push({ role: "assistant", content: "AI helper unavailable: use the lesson examples or open an issue." });
     } catch (err) {
       document.getElementById("typingIndicator")?.remove();
       addMessage("Connection issue — try again.", "assistant");

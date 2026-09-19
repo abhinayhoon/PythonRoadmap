@@ -1,0 +1,24 @@
+name: Static site checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required site assets
+        run: |
+          test -s index.html
+          test -s style.css
+          test -s script.js
+      - name: Prevent committed credentials
+        run: |
+          ! grep -EIn '(AIza[0-9A-Za-z_-]{20,}|sk-[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})' index.html script.js style.css
